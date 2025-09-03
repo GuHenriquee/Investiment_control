@@ -8,13 +8,13 @@ import { CreateAccount } from '../componentes/create-account/create-account';
   providedIn: 'root'
 })
 export class UserService {
-  private apiUrl = 'https://sua-api.com/users'; // URL do seu backend
+  private apiUrl = 'http://127.0.0.1:8000/api/register/'; // URL do seu backend
 
   constructor(private http: HttpClient) { }
 
   // Este método recebe os dados do formulário e retorna um Observable
   // A resposta do backend DEVE ser um objeto User completo (com id, etc)
-  register(userData: CreateAccount): Observable<User> {
+  register(userData: User): Observable<User> {
     return this.http.post<User>(this.apiUrl, userData);
   }
 }

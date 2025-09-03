@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { UserService } from '../../services/user-service';
+import { User } from '../interfaces';
 
 
 @Component({
@@ -11,7 +13,7 @@ import {FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular
 })
 export class CreateAccount implements OnInit {
     
-  constructor(private fb: FormBuilder) {} 
+  constructor(private fb: FormBuilder, private userService: UserService) {} 
   userForm!: FormGroup;
 
   ngOnInit(): void {
@@ -20,16 +22,19 @@ export class CreateAccount implements OnInit {
         email: ['', Validators.email],
         password: ['', Validators.minLength(6)]
       })  
-
     }
 
   onSubmit(): void {
-      console.log('Dados do formulário:', this.userForm.value);
+      const userData: User = this.userForm.value 
 
+      this.userService.register(userData).subscribe({ 
+        next: (newUser) => {
+          console.log('Usuário criado com sucesso!', newUser);
+        },
+        error: (err) => {
+          console.error('Ocorreu um erro:', err);
+        }
+      });
   }
-
-
-
-
 
 }
