@@ -1,0 +1,80 @@
+body {
+    height: 100vh;
+    background-image: url(../../../../assets/unnamed\ \(1\).png);
+    background-repeat: no-repeat;
+    background-size: 50% 100%;
+    background-position: left center;
+    background-color: #c5c5c5;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    height: 100vh; 
+}
+
+form {
+  grid-column: 2;
+  justify-self: center;
+  align-self: center;
+  background-color: #f7f7f7;
+  padding: 2.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+  width: 90%; /* Use apenas porcentagem para a largura */
+  max-width: 50%; /* Use max-width para limitar o tamanho em telas grandes */
+  margin: auto; /* Centralize o formulário vertical e horizontalmente */
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+form div {
+  margin-bottom: 1.25rem; /* ~20px */
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem; /* ~8px */
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+  width: 100%;
+  padding: 0.75rem; /* ~12px */
+  border: 1px solid #ccc;
+  border-radius: 0.25rem; /* ~4px */
+  box-sizing: border-box;
+}
+
+/* Estilos para o título */
+form h2 {
+  text-align: center;
+  margin-bottom: 1.5625rem; /* ~25px */
+  color: #3cf13c;
+  font-size: 1.75rem; /* Título responsivo */
+}
+
+/* Estilos para o botão de submit */
+form button {
+  width: 100%;
+  padding: 0.75rem; /* ~12px */
+  border: none;
+  border-radius: 0.25rem; /* ~4px */
+  background-color: #3cf13c;
+  color: white;
+  font-size: 1rem; /* Tamanho da fonte base */
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #4CAF50;
+}
+
+form button:disabled {
+  background-color: #a5d6a7;
+  cursor: not-allowed;
+}
