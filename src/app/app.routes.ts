@@ -4,7 +4,7 @@ import { Dashboard } from './componentes/dashboard/dashboard';
 
 export const routes: Routes = [
     {
-    path: 'CreateAccount',
+    path: 'createAccount',
     component: CreateAccount,
   },
   {

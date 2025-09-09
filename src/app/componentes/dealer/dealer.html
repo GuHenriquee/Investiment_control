@@ -1,8 +1,14 @@
-<form>
-    <label for="browser">Operation</label>
-    <input list="browsers" id="browser" name="browser">
-    <datalist id="browsers">
+
+
+<form [formGroup]="operation" (ngSubmit)="onSubmit()">
+    <label for="operationType">Operation</label>
+    <input list="operationTypes" id="operationType">
+    <datalist id="operationTypes">
         <option value="Retirar">
-        <option value="Adicionar ">"
+        <option value="Adicionar">
     </datalist>
+
+    <label for="amount">Amount</label>
+    <input type="number" id = "amount">
+
 </form>
