@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Dealer } from "../dealer/dealer";
+import { Dealer } from '../../componentes/dealer/dealer';
 
 @Component({
   selector: 'app-dashboard',

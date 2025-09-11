@@ -1,10 +1,10 @@
 import { Routes } from '@angular/router';
-import { CreateAccount } from './componentes/create-account/create-account';
-import { Dashboard } from './componentes/dashboard/dashboard';
+import { CreateAccount } from './pages/create-account/create-account';
+import { Dashboard } from './pages/dashboard/dashboard';
 
 export const routes: Routes = [
     {
-    path: 'createAccount',
+    path: 'CreateAccount',
     component: CreateAccount,
   },
   {

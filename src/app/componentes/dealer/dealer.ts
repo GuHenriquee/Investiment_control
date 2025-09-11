@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators, ɵInternalFormsSharedModule, ReactiveFormsModule } from '@angular/forms';
 import { OperationsService } from '../../services/operations-service';
-import { Operation } from './operation';
+import { Operation } from '../interfaces';
 
 @Component({
   selector: 'app-dealer',
