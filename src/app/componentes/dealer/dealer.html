@@ -1,14 +1,14 @@
-
-
 <form [formGroup]="operation" (ngSubmit)="onSubmit()">
     <label for="operationType">Operation</label>
-    <input list="operationTypes" id="operationType">
+    <input type="text" id="operationType" list="operationTypes" formControlName="operationType"> 
+    
     <datalist id="operationTypes">
         <option value="Retirar">
         <option value="Adicionar">
     </datalist>
 
     <label for="amount">Amount</label>
-    <input type="number" id = "amount">
+    <input formControlName="amount" type="number" id="amount">
 
+    <button type="submit" [disabled]="!operation.valid">Enviar</button>
 </form>
