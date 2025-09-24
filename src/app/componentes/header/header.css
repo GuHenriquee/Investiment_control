@@ -1,0 +1,32 @@
+
+header{
+    display: flex;
+    width: 100%;
+}
+/* Dentro de header.component.css */
+
+header {
+  display: flex; /* Alinha os links e o botão de login na mesma linha */
+  align-items: center; /* Centraliza os itens verticalmente */
+  justify-content: space-between; /* Espaça os itens, empurrando o login para a direita */
+  
+  width: 100%; /* A propriedade chave para ocupar toda a largura */
+  
+  padding: 15px 30px; /* Espaçamento interno (vertical e horizontal) */
+  background-color: #333; /* Uma cor de fundo para o header */
+  color: white; /* Cor do texto */
+  
+  box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+}
+
+/* Estilo para os links de navegação */
+header a {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 1.1em;
+}
+
+header a:hover {
+  text-decoration: underline;
+}

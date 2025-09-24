@@ -1,12 +1,7 @@
 <body>
   <main>
-    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
-      
-      <h2>Create account</h2>
-      <div>
-        <label for="name">Nome:</label>
-        <input id="name" type="text" formControlName="name">
-      </div>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <h2>Login</h2>
 
       <div>
         <label for="email">Email:</label>
@@ -18,9 +13,8 @@
         <input id="password" type="password" formControlName="password">
       </div>
 
-      <button type="submit" [disabled]="!userForm.valid">Criar Conta</button>
+      <button type="submit" [disabled]="!loginForm.valid">Criar Conta</button>
 
     </form>
   </main>
 </body>
-

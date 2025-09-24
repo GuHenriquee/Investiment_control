@@ -19,18 +19,16 @@ export class Dealer implements OnInit {
    ngOnInit() {
     this.operation = this.fb.nonNullable.group({
       amount: [0, Validators.min(1)],
-      operationType: [''],
-      previousValue:[0],
+      operationType: ['']
     })
 }
   
   onSubmit(){
     const data: Operation = this.operation.value
-    console.log("Enviando para a API:", data);
 
     this.op.sendOperation(data).subscribe({ 
         next: (newOperation) => {
-          console.log('Usuário criado com sucesso!', newOperation);
+          console.log('Operação realizada com sucesso!', newOperation);
         },
         error: (err) => {
           console.error('Ocorreu um erro:', err);

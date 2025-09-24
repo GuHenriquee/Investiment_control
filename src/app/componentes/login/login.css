@@ -1,0 +1,64 @@
+
+form {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px; /* Largura máxima do formulário */
+  
+  /* --- Propriedades de Posicionamento --- */
+  
+  position: absolute; /* Remove o elemento do fluxo normal */
+  
+  top: 20px;  /* Distância de 20px do topo */
+  right: 20px; /* Distância de 20px da direita */
+
+  box-sizing: border-box; 
+}
+
+/* --- Título "Create account" --- */
+form h2 {
+  color: #39ff14; /* Cor verde-limão vibrante */
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-size: 2em; /* Tamanho da fonte maior */
+}
+
+/* --- Rótulos (Labels: Email, Senha) --- */
+form label {
+  display: block; /* Faz o label ocupar sua própria linha */
+  margin-bottom: 8px; /* Espaço entre o label e o campo de input */
+  font-weight: bold;
+  color: #333;
+}
+
+/* --- Campos de Entrada (Inputs) --- */
+form input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Garante que o padding não afete a largura total */
+  margin-bottom: 20px; /* Espaço entre os campos de input */
+}
+
+/* --- Botão "Entrar" --- */
+form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #a8d8a8; /* Verde claro e suave */
+  color: #333; /* Cor do texto escura para melhor contraste */
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer; /* Muda o cursor para uma mãozinha */
+  transition: background-color 0.3s ease; /* Efeito suave ao passar o mouse */
+}
+
+/* Efeito visual ao passar o mouse sobre o botão */
+form button:hover {
+  background-color: #8dc08d;
+}

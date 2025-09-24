@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpRequest } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Operation } from '../componentes/interfaces';
 import { ReceveOperation } from '../componentes/interfaces';
@@ -16,7 +16,18 @@ export class OperationsService {
 
   sendOperation(operation:Operation):Observable<ReceveOperation>{
   
-    return this.http.post<ReceveOperation>(this.api,operation)
+    const token = localStorage.getItem('accessToken');
+    if (!token) {
+      console.error('Token de acesso não encontrado no localStorage!');
+    }
+
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}` 
+    });
+
+    return this.http.post<ReceveOperation>(this.api, operation, { headers: headers });
+
   }
  
 }
