@@ -25,3 +25,10 @@ export interface ReceveOperation {
     previousAmount: number;
     newValue: number;
 }
+
+export interface Cripto {
+    symbol: string;
+    current_price: number;
+    high_24h: number;
+    low_24h: number;
+}

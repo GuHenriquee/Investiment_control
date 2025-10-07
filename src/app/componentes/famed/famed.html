@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Preços de Criptomoedas em Tempo Real</h1>
+  <p>Conectado ao servidor WebSocket...</p>
+
+  <div *ngIf="cryptoList.length === 0" class="loading">
+    Aguardando dados...
+  </div>
+
+  <div *ngFor="let msg of cryptoList" class="crypto-card">
+    <h2>{{ msg.symbol }}</h2>
+    <p class="price">Preço: <span>{{ msg.current_price | currency:'USD':'symbol':'1.2-5' }}</span></p>
+    
+  </div>
+</div>
